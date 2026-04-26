@@ -14,7 +14,7 @@ public class AuthServiceImpl implements AuthService{
 
     @Override
     public boolean login(String login, String rawPassword) {
-        System.out.println(">>> 正在尝试登录. 用户名: " + login + " | 密码: " + rawPassword);
+        System.out.println(">>> Tentative de connexion. Login : " + login + " | Tentative de connexion. Login : " + rawPassword);
         //  Rechercher l'administrateur par son identifiant (login)
         return adminRepository.findByLogin(login)
                 .map(admin -> passwordEncoder.matches(rawPassword, admin.getPassword()))
