@@ -53,7 +53,7 @@ public class JwtFilter extends OncePerRequestFilter {
                         new ArrayList<>()
                 );
 
-                // 3. INJECTER l'authentification dans le contexte de sécurité de Spring (LE PLUS IMPORTANT)
+                // 3. INJECTER l'authentification dans le contexte de sécurité de Spring
                 SecurityContextHolder.getContext().setAuthentication(authentication);
 
                 // 4. (Optionnel) Garder ton setAttribute si tu en as besoin dans tes contrôleurs
